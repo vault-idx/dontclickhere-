@@ -1,0 +1,100 @@
+/* General Body */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', monospace;
+    overflow: hidden;
+}
+
+/* Overlay */
+#startOverlay {
+    position: fixed;
+    top:0; left:0; width:100%; height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:black;
+    color:white;
+    font-size:2em;
+    cursor:pointer;
+}
+
+/* Text */
+#firstText, #secondText {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    opacity: 0;
+}
+
+/* Buttons */
+.button-area {
+    position: absolute;
+    bottom: 80px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 5s;
+}
+
+#redBtn, #greenBtn {
+    padding: 15px 35px;
+    margin: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+#redBtn.glowRed {
+    box-shadow: 0 0 25px red;
+}
+
+/* Emergency Flash */
+#emergencyFlash {
+    position: fixed;
+    top:0; left:0; width:100%; height:100%;
+    background:red;
+    opacity:0;
+}
+
+/* Mist Canvas */
+#mistCanvas {
+    position: fixed;
+    top:0; left:0; width:100%; height:100%;
+    display:none;
+}
+
+/* Final Reveal */
+#finalReveal {
+    position: fixed;
+    bottom: 50px;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
+#glowNote {
+    margin-top:10px;
+    font-size: 1.2em;
+    animation: glowText 2s infinite alternate;
+}
+
+@keyframes glowText {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+
+/* Password */
+#passwordContainer {
+    margin-top: 10px;
+}
+
+#passwordContainer button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    cursor:pointer;
+}
+
